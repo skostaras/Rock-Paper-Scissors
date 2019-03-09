@@ -9,9 +9,10 @@
 import Foundation
 import GameplayKit
 
-let randomNr = GKRandomDistribution(lowestValue: 0, highestValue: 2)
+
 
 func randomSign() -> Sign {
+    let randomNr = GKRandomDistribution(lowestValue: 0, highestValue: 2)
     let sign = randomNr.nextInt()
     switch sign {
     case 0:

@@ -41,7 +41,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                                 <state key="normal" title="✊"/>
                                                 <connections>
-                                                    <action selector="dioRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAD-mR-CbG"/>
                                                     <action selector="playRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRZ-mY-bCt"/>
                                                 </connections>
                                             </button>
@@ -50,7 +49,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                                 <state key="normal" title="✋"/>
                                                 <connections>
-                                                    <action selector="dioPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBE-hA-yBc"/>
                                                     <action selector="playPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lPn-8Q-aaV"/>
                                                 </connections>
                                             </button>
