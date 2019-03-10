@@ -33,13 +33,29 @@ enum Sign {
     var icon: String {
         switch self {
         case .rock:
-            return "✊🏽"
+            return "✊🏾"
         case .paper:
             return "✋🏾"
         case .scissors:
+            return "✌🏾"
+        }
+        
+        
+    }
+    
+    var dioIcon: String {
+        switch self {
+        case .rock:
+            return "✊"
+        case .paper:
+            return "✋"
+        case .scissors:
             return "✌️"
         }
+        
+        
     }
+    
     
     func showSign(phonesSign: Sign) -> GameState {
         

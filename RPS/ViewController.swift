@@ -8,19 +8,58 @@
 
 import UIKit
 
+//class MyCustomViewController: UIViewController {
+//    var myString: String = ""
+//
+//    convenience init( myString: String ) {
+//        self.init()
+//
+//        self.myString = myString
+//    }
+//}
+
 class ViewController: UIViewController {
     
-    @IBOutlet weak var sign: UILabel!
+    var aRandomSign : Sign = .paper
     
-    @IBOutlet weak var gameStatus: UILabel!
+    convenience init(aRandomSign : Sign) {
+//        self.init()
+        self.init()
+        self.aRandomSign = aRandomSign
+//        super.init()
+    }
     
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+//    var monkeysSign : Sign
+//
+//    init(monkeysSign : Sign) {
+//        self.monkeysSign = monkeysSign
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    override init() {
+//        super.init()
+//    }
+    
+    
+    @IBOutlet weak var monkeyButton: UIButton!
+    @IBOutlet weak var monkeyHand: UILabel!
+    @IBOutlet weak var dionisisButton: UIButton!
     @IBOutlet weak var dioRock: UIButton!
-    
     @IBOutlet weak var dioPaper: UIButton!
-    
     @IBOutlet weak var dioScissors: UIButton!
+    @IBOutlet weak var dioChoice: UILabel!
+    @IBOutlet weak var replayBtn: UIButton!
     
-    @IBOutlet weak var playAgain: UIView!
+    @IBAction func monkeyPlay(_ sender: Any) {
+        updateUI(gameState: .diosTurn)
+    }
     
     @IBAction func playRock(_ sender: Any) {
         play(chosenSign: .rock)
@@ -49,10 +88,49 @@ class ViewController: UIViewController {
         switch gameState {
             
         case .start:
-            gameStatus.text = GameState.start.statusMessage
-            view.backgroundColor = UIColor.white
-            sign.text = "🙉"
-            playAgain.isHidden = true
+            replayBtn.isEnabled = false
+            replayBtn.isHidden = true
+            dioChoice.isEnabled = false
+            dioChoice.isHidden = true
+            dionisisButton.titleLabel?.font = .systemFont(ofSize: 130)
+            monkeyButton.isEnabled = true
+            monkeyButton.setTitle("🐵", for: .normal)
+            monkeyHand.isHidden = true
+            
+            dionisisButton.isHidden = false
+            dionisisButton.isEnabled = false
+//            dionisisButton.
+            //TODO
+            dionisisButton.setTitle("😎", for: .normal)
+//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+            
+            dioRock.isHidden = true
+            dioPaper.isHidden = true
+            dioScissors.isHidden = true
+            
+            dioRock.isEnabled = false
+            dioPaper.isEnabled = false
+            dioScissors.isEnabled = false
+            
+            //shouldn't matter
+//            return Sign.paper
+            
+        case .diosTurn:
+//            monkeyButton.setTitle("🐵", for: .normal)
+            monkeyButton.isEnabled = false
+            monkeyHand.isHidden = false
+            
+            
+            aRandomSign =  randomSign()
+            
+//            let monkeysSign = aRandomSign.init(monkeysSign: randomSign())
+            
+//            monkeysSign = randomSign()
+            
+            
+//            let phonesRandomSign = randomSign()
+            monkeyHand.text = aRandomSign.icon
+            
             
             dioRock.isHidden = false
             dioPaper.isHidden = false
@@ -62,44 +140,50 @@ class ViewController: UIViewController {
             dioPaper.isEnabled = true
             dioScissors.isEnabled = true
             
+//            return phonesRandomSign
+            
         case .win:
-            gameStatus.text = GameState.win.statusMessage
-            view.backgroundColor = UIColor.green
+            monkeyButton.setTitle("🙈", for: .normal)
+            //TODO
+            dionisisButton.setTitle("😁", for: .normal)
+//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             
         case .lose:
-            gameStatus.text = GameState.lose.statusMessage
-            view.backgroundColor = UIColor.red
+            monkeyButton.setTitle("🙉", for: .normal)
+            //TODO
+            dionisisButton.setTitle("☹️", for: .normal)
+//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             
         case .draw:
-            gameStatus.text = GameState.draw.statusMessage
-            view.backgroundColor = UIColor.gray
+            monkeyButton.setTitle("🙊", for: .normal)
+            //TODO
+            dionisisButton.setTitle("😕", for: .normal)
+//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
         }
     }
     
     func play(chosenSign: Sign) {
         
-        let phonesRandomSign = randomSign()
-        let newGameState = chosenSign.showSign(phonesSign: phonesRandomSign)
+        let newGameState = chosenSign.showSign(phonesSign: aRandomSign)
         
         updateUI(gameState: newGameState)
-        sign.text = phonesRandomSign.icon
         
+        dioChoice.isHidden = false
+        
+        dioChoice.text = chosenSign.dioIcon
+        
+        dionisisButton.isEnabled = true
+
         dioRock.isEnabled = false
         dioPaper.isEnabled = false
         dioScissors.isEnabled = false
+
+        dioRock.isHidden = true
+        dioPaper.isHidden = true
+        dioScissors.isHidden = true
         
-        switch chosenSign {
-        case .rock:
-            dioPaper.isHidden = true
-            dioScissors.isHidden = true
-        case .paper:
-            dioRock.isHidden = true
-            dioScissors.isHidden = true
-        case .scissors:
-            dioRock.isHidden = true
-            dioPaper.isHidden = true
-        }
-        playAgain.isHidden = false
+        replayBtn.isEnabled = true
+        replayBtn.isHidden = false
     }
     
 

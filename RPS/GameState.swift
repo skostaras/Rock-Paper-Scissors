@@ -9,18 +9,6 @@
 import Foundation
 
 enum GameState {
-    case start, win, lose, draw
+    case start, diosTurn, win, lose, draw
     
-    var statusMessage : String {
-        switch self {
-        case .start:
-            return "Play!"
-        case .win:
-            return "You've won!"
-        case .lose:
-            return "You lose..."
-        case .draw:
-            return "It's a draw."
-        }
-    }
 }
