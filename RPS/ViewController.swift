@@ -8,18 +8,9 @@
 
 import UIKit
 
-//class MyCustomViewController: UIViewController {
-//    var myString: String = ""
-//
-//    convenience init( myString: String ) {
-//        self.init()
-//
-//        self.myString = myString
-//    }
-//}
-
 class ViewController: UIViewController {
     
+    //must initialize, any would do
     var aRandomSign : Sign = .paper
     let kidsLaugh = SimpleSound(named: "kidsLaugh")
     let monkeyLaugh = SimpleSound(named: "monkeyLaugh")
@@ -57,7 +48,6 @@ class ViewController: UIViewController {
     @IBAction func playAgain(_ sender: Any) {
         updateUI(gameState: .start)
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,21 +59,18 @@ class ViewController: UIViewController {
         switch gameState {
             
         case .start:
-            replayBtn.isEnabled = false
-            replayBtn.isHidden = true
-            dioChoice.isEnabled = false
-            dioChoice.isHidden = true
             monkeyButton.isEnabled = true
             monkeyButton.setTitle("🐵", for: .normal)
             monkeyHand.isHidden = true
             
             dioPhoto.isHidden = false
-//            dionisisButton.
-            //TODO
-//            dioPhoto.text = "😎"
-//            dioPhoto.font = dioPhoto.font.withSize(120)
-//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             dioPhoto.image = UIImage(named: "win3")
+            dioChoice.isEnabled = false
+            dioChoice.isHidden = true
+            
+            replayBtn.isEnabled = false
+            replayBtn.isHidden = true
+     
             dioRock.isHidden = true
             dioPaper.isHidden = true
             dioScissors.isHidden = true
@@ -93,12 +80,10 @@ class ViewController: UIViewController {
             dioScissors.isEnabled = false
             
         case .diosTurn:
-//            monkeyButton.setTitle("🐵", for: .normal)
             monkeyButton.isEnabled = false
             monkeyHand.isHidden = false
             
             aRandomSign =  randomSign()
-            
             monkeyHand.text = aRandomSign.icon
             
             dioPhoto.image = UIImage(named: "tie2")
@@ -113,26 +98,17 @@ class ViewController: UIViewController {
             
         case .win:
             monkeyButton.setTitle("🙈", for: .normal)
-            //TODO
-//             dioPhoto.text = "😁"
-//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             dioPhoto.image = UIImage(named: "win2")
             kidsLaugh.play()
             
         case .lose:
             monkeyButton.setTitle("🙉", for: .normal)
-            //TODO
-//            dioPhoto.text = "☹️"
-//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             dioPhoto.image = UIImage(named: "sad")
             monkeyLaugh.play()
             
         case .draw:
             monkeyButton.setTitle("🙊", for: .normal)
-            //TODO
-//             dioPhoto.text = "😕"
             dioPhoto.image = UIImage(named: "tie1")
-//            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
         }
     }
     
@@ -143,8 +119,10 @@ class ViewController: UIViewController {
         updateUI(gameState: newGameState)
         
         dioChoice.isHidden = false
-        
         dioChoice.text = chosenSign.dioIcon
+        
+        replayBtn.isEnabled = true
+        replayBtn.isHidden = false
         
         dioRock.isEnabled = false
         dioPaper.isEnabled = false
@@ -153,14 +131,7 @@ class ViewController: UIViewController {
         dioRock.isHidden = true
         dioPaper.isHidden = true
         dioScissors.isHidden = true
-        
-        replayBtn.isEnabled = true
-        replayBtn.isHidden = false
     }
-    
 
-    
-
-    
 }
 

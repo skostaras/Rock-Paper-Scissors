@@ -72,8 +72,8 @@
                                             <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZBC-tu-Taq"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-hE-yRZ">
-                                        <rect key="frame" x="0.0" y="575.5" width="460" height="156"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-hE-yRZ">
+                                        <rect key="frame" x="34" y="575.5" width="392" height="156"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oja-yz-AeN">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="156"/>
@@ -84,7 +84,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iu6-4K-Vff">
-                                                <rect key="frame" x="165" y="0.0" width="130" height="156"/>
+                                                <rect key="frame" x="131" y="0.0" width="130" height="156"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <state key="normal" title="✋"/>
                                                 <connections>
@@ -92,7 +92,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-AV-jTg">
-                                                <rect key="frame" x="330" y="0.0" width="130" height="156"/>
+                                                <rect key="frame" x="262" y="0.0" width="130" height="156"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <state key="normal" title="✌️"/>
                                                 <connections>
