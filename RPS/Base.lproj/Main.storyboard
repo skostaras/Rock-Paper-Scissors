@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vqO-2Y-59h">
-                                <rect key="frame" x="283" y="18.5" width="458" height="731.5"/>
+                                <rect key="frame" x="298.5" y="18.5" width="427" height="731.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="588-UM-qwc">
-                                        <rect key="frame" x="35.5" y="0.0" width="387" height="168"/>
+                                        <rect key="frame" x="20" y="0.0" width="387" height="168"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJn-PZ-Khx">
                                                 <rect key="frame" x="0.0" y="0.0" width="141" height="168"/>
@@ -41,20 +41,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-a3-B5u">
-                                        <rect key="frame" x="0.0" y="208" width="458" height="155.5"/>
+                                        <rect key="frame" x="51" y="208" width="325" height="155.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-sc-SCV">
-                                                <rect key="frame" x="0.0" y="62.5" width="54" height="30"/>
-                                                <state key="normal" title="Dionisis"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DionisisPhoto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-Du-sb0">
-                                                <rect key="frame" x="133" y="67.5" width="105" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="67.5" width="105" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fA-S9-W6A">
-                                                <rect key="frame" x="317" y="0.0" width="141" height="155.5"/>
+                                                <rect key="frame" x="184" y="0.0" width="141" height="155.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="130"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -62,7 +58,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLH-4w-HWH">
-                                        <rect key="frame" x="180.5" y="403.5" width="97" height="144"/>
+                                        <rect key="frame" x="165" y="403.5" width="97" height="144"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="110"/>
                                         <state key="normal" title="⏎">
                                             <color key="titleColor" red="0.0" green="0.80100388601036265" blue="0.0013524225119324674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +68,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-hE-yRZ">
-                                        <rect key="frame" x="15.5" y="587.5" width="427" height="144"/>
+                                        <rect key="frame" x="0.0" y="587.5" width="427" height="144"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oja-yz-AeN">
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="144"/>
@@ -113,9 +109,9 @@
                     <connections>
                         <outlet property="dioChoice" destination="3fA-S9-W6A" id="gbE-za-KYL"/>
                         <outlet property="dioPaper" destination="Iu6-4K-Vff" id="KfO-h2-BjS"/>
+                        <outlet property="dioPhoto" destination="4bo-Du-sb0" id="RUg-1X-leW"/>
                         <outlet property="dioRock" destination="oja-yz-AeN" id="D8p-SL-34M"/>
                         <outlet property="dioScissors" destination="HAi-AV-jTg" id="Grx-VL-Yx5"/>
-                        <outlet property="dionisisButton" destination="hh9-sc-SCV" id="te0-uM-L8A"/>
                         <outlet property="monkeyButton" destination="QJn-PZ-Khx" id="dk4-Zi-YtF"/>
                         <outlet property="monkeyHand" destination="SYv-kR-ec7" id="zNY-WI-wbD"/>
                         <outlet property="replayBtn" destination="jLH-4w-HWH" id="zjd-8F-4Dv"/>

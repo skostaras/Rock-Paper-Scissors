@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var monkeyButton: UIButton!
     @IBOutlet weak var monkeyHand: UILabel!
-    @IBOutlet weak var dionisisButton: UIButton!
+    @IBOutlet weak var dioPhoto: UILabel!
     @IBOutlet weak var dioRock: UIButton!
     @IBOutlet weak var dioPaper: UIButton!
     @IBOutlet weak var dioScissors: UIButton!
@@ -92,16 +92,17 @@ class ViewController: UIViewController {
             replayBtn.isHidden = true
             dioChoice.isEnabled = false
             dioChoice.isHidden = true
-            dionisisButton.titleLabel?.font = .systemFont(ofSize: 130)
+//            dionisisButton.titleLabel?.font = .systemFont(ofSize: 130)
             monkeyButton.isEnabled = true
             monkeyButton.setTitle("🐵", for: .normal)
             monkeyHand.isHidden = true
             
-            dionisisButton.isHidden = false
-            dionisisButton.isEnabled = false
+            dioPhoto.isHidden = false
+            dioPhoto.isEnabled = false
 //            dionisisButton.
             //TODO
-            dionisisButton.setTitle("😎", for: .normal)
+            dioPhoto.text = "😎"
+            dioPhoto.font = dioPhoto.font.withSize(130)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             
             dioRock.isHidden = true
@@ -145,19 +146,22 @@ class ViewController: UIViewController {
         case .win:
             monkeyButton.setTitle("🙈", for: .normal)
             //TODO
-            dionisisButton.setTitle("😁", for: .normal)
+             dioPhoto.text = "😁"
+//            dionisisButton.setTitle("😁", for: .normal)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             
         case .lose:
             monkeyButton.setTitle("🙉", for: .normal)
             //TODO
-            dionisisButton.setTitle("☹️", for: .normal)
+            dioPhoto.text = "☹️"
+//            dionisisButton.setTitle("☹️", for: .normal)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             
         case .draw:
             monkeyButton.setTitle("🙊", for: .normal)
             //TODO
-            dionisisButton.setTitle("😕", for: .normal)
+             dioPhoto.text = "😕"
+//            dionisisButton.setTitle("😕", for: .normal)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
         }
     }
@@ -172,8 +176,6 @@ class ViewController: UIViewController {
         
         dioChoice.text = chosenSign.dioIcon
         
-        dionisisButton.isEnabled = true
-
         dioRock.isEnabled = false
         dioPaper.isEnabled = false
         dioScissors.isEnabled = false
