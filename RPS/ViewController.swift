@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var monkeyButton: UIButton!
     @IBOutlet weak var monkeyHand: UILabel!
-    @IBOutlet weak var dioPhoto: UILabel!
+    @IBOutlet weak var dioPhoto: UIImageView!
     @IBOutlet weak var dioRock: UIButton!
     @IBOutlet weak var dioPaper: UIButton!
     @IBOutlet weak var dioScissors: UIButton!
@@ -78,13 +78,12 @@ class ViewController: UIViewController {
             monkeyHand.isHidden = true
             
             dioPhoto.isHidden = false
-            dioPhoto.isEnabled = false
 //            dionisisButton.
             //TODO
-            dioPhoto.text = "😎"
-            dioPhoto.font = dioPhoto.font.withSize(120)
+//            dioPhoto.text = "😎"
+//            dioPhoto.font = dioPhoto.font.withSize(120)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
-            
+            dioPhoto.image = UIImage(named: "win3")
             dioRock.isHidden = true
             dioPaper.isHidden = true
             dioScissors.isHidden = true
@@ -102,6 +101,8 @@ class ViewController: UIViewController {
             
             monkeyHand.text = aRandomSign.icon
             
+            dioPhoto.image = UIImage(named: "tie2")
+            
             dioRock.isHidden = false
             dioPaper.isHidden = false
             dioScissors.isHidden = false
@@ -113,21 +114,24 @@ class ViewController: UIViewController {
         case .win:
             monkeyButton.setTitle("🙈", for: .normal)
             //TODO
-             dioPhoto.text = "😁"
+//             dioPhoto.text = "😁"
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+            dioPhoto.image = UIImage(named: "win2")
             kidsLaugh.play()
             
         case .lose:
             monkeyButton.setTitle("🙉", for: .normal)
             //TODO
-            dioPhoto.text = "☹️"
+//            dioPhoto.text = "☹️"
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+            dioPhoto.image = UIImage(named: "sad")
             monkeyLaugh.play()
             
         case .draw:
             monkeyButton.setTitle("🙊", for: .normal)
             //TODO
-             dioPhoto.text = "😕"
+//             dioPhoto.text = "😕"
+            dioPhoto.image = UIImage(named: "tie1")
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
         }
     }
