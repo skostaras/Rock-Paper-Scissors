@@ -21,32 +21,13 @@ import UIKit
 class ViewController: UIViewController {
     
     var aRandomSign : Sign = .paper
+    let kidsLaugh = SimpleSound(named: "kidsLaugh")
+    let monkeyLaugh = SimpleSound(named: "monkeyLaugh")
     
     convenience init(aRandomSign : Sign) {
-//        self.init()
         self.init()
         self.aRandomSign = aRandomSign
-//        super.init()
     }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-//    var monkeysSign : Sign
-//
-//    init(monkeysSign : Sign) {
-//        self.monkeysSign = monkeysSign
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//    override init() {
-//        super.init()
-//    }
-    
     
     @IBOutlet weak var monkeyButton: UIButton!
     @IBOutlet weak var monkeyHand: UILabel!
@@ -92,7 +73,6 @@ class ViewController: UIViewController {
             replayBtn.isHidden = true
             dioChoice.isEnabled = false
             dioChoice.isHidden = true
-//            dionisisButton.titleLabel?.font = .systemFont(ofSize: 130)
             monkeyButton.isEnabled = true
             monkeyButton.setTitle("🐵", for: .normal)
             monkeyHand.isHidden = true
@@ -102,7 +82,7 @@ class ViewController: UIViewController {
 //            dionisisButton.
             //TODO
             dioPhoto.text = "😎"
-            dioPhoto.font = dioPhoto.font.withSize(130)
+            dioPhoto.font = dioPhoto.font.withSize(120)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
             
             dioRock.isHidden = true
@@ -113,25 +93,14 @@ class ViewController: UIViewController {
             dioPaper.isEnabled = false
             dioScissors.isEnabled = false
             
-            //shouldn't matter
-//            return Sign.paper
-            
         case .diosTurn:
 //            monkeyButton.setTitle("🐵", for: .normal)
             monkeyButton.isEnabled = false
             monkeyHand.isHidden = false
             
-            
             aRandomSign =  randomSign()
             
-//            let monkeysSign = aRandomSign.init(monkeysSign: randomSign())
-            
-//            monkeysSign = randomSign()
-            
-            
-//            let phonesRandomSign = randomSign()
             monkeyHand.text = aRandomSign.icon
-            
             
             dioRock.isHidden = false
             dioPaper.isHidden = false
@@ -141,27 +110,24 @@ class ViewController: UIViewController {
             dioPaper.isEnabled = true
             dioScissors.isEnabled = true
             
-//            return phonesRandomSign
-            
         case .win:
             monkeyButton.setTitle("🙈", for: .normal)
             //TODO
              dioPhoto.text = "😁"
-//            dionisisButton.setTitle("😁", for: .normal)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+            kidsLaugh.play()
             
         case .lose:
             monkeyButton.setTitle("🙉", for: .normal)
             //TODO
             dioPhoto.text = "☹️"
-//            dionisisButton.setTitle("☹️", for: .normal)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+            monkeyLaugh.play()
             
         case .draw:
             monkeyButton.setTitle("🙊", for: .normal)
             //TODO
              dioPhoto.text = "😕"
-//            dionisisButton.setTitle("😕", for: .normal)
 //            dionisisButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
         }
     }

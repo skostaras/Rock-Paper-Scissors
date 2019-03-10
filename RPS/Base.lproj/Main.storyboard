@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,51 +15,51 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RPS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vqO-2Y-59h">
-                                <rect key="frame" x="298.5" y="18.5" width="427" height="731.5"/>
+                                <rect key="frame" x="-23" y="82.5" width="460" height="731.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="588-UM-qwc">
-                                        <rect key="frame" x="20" y="0.0" width="387" height="168"/>
+                                        <rect key="frame" x="47.5" y="0.0" width="365" height="156"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJn-PZ-Khx">
-                                                <rect key="frame" x="0.0" y="0.0" width="141" height="168"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="156"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <state key="normal" title="🐵"/>
                                                 <connections>
                                                     <action selector="monkeyPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DkW-rZ-Vsh"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙌🏾" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYv-kR-ec7">
-                                                <rect key="frame" x="246" y="12.5" width="141" height="155.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                                <rect key="frame" x="235" y="12.5" width="130" height="143.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-a3-B5u">
-                                        <rect key="frame" x="51" y="208" width="325" height="155.5"/>
+                                        <rect key="frame" x="73" y="196" width="314" height="143.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DionisisPhoto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-Du-sb0">
-                                                <rect key="frame" x="0.0" y="67.5" width="105" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="105" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fA-S9-W6A">
-                                                <rect key="frame" x="184" y="0.0" width="141" height="155.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                                <rect key="frame" x="184" y="0.0" width="130" height="143.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLH-4w-HWH">
-                                        <rect key="frame" x="165" y="403.5" width="97" height="144"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                        <rect key="frame" x="177.5" y="379.5" width="105" height="156"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                         <state key="normal" title="⏎">
                                             <color key="titleColor" red="0.0" green="0.80100388601036265" blue="0.0013524225119324674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -68,27 +68,27 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-hE-yRZ">
-                                        <rect key="frame" x="0.0" y="587.5" width="427" height="144"/>
+                                        <rect key="frame" x="0.0" y="575.5" width="460" height="156"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oja-yz-AeN">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="144"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="156"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <state key="normal" title="✊"/>
                                                 <connections>
                                                     <action selector="playRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRZ-mY-bCt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iu6-4K-Vff">
-                                                <rect key="frame" x="154" y="0.0" width="119" height="144"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                                <rect key="frame" x="165" y="0.0" width="130" height="156"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <state key="normal" title="✋"/>
                                                 <connections>
                                                     <action selector="playPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lPn-8Q-aaV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-AV-jTg">
-                                                <rect key="frame" x="308" y="0.0" width="119" height="144"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                                <rect key="frame" x="330" y="0.0" width="130" height="156"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                                 <state key="normal" title="✌️"/>
                                                 <connections>
                                                     <action selector="playScissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8GQ-Mg-kq9"/>
@@ -97,6 +97,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="460" id="6Vk-lS-8Bl"/>
+                                    <constraint firstAttribute="height" constant="731.5" id="Vgh-Wz-F5C"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
